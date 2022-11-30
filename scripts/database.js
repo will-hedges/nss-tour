@@ -1,23 +1,23 @@
-// factory function for random booking objects
-const createBooking = () => {
+// factory function for creating a random date string, MM/DD/YYYY
+const createRandomDate = () => {
   const randomMonth = Math.floor(Math.random() * 12) + 1;
   const randomDay = Math.floor(Math.random() * 28) + 1;
   const randomYear = Math.floor(Math.random() * 2) + 2022;
   const randomDate = `${randomMonth}/${randomDay}/${randomYear}`;
-
-  return {
-    id: bookingId,
-    venueId: Math.floor(Math.random() * 5) + 1,
-    bandId: Math.floor(Math.random() * 10) + 1,
-    bookingDate: randomDate,
-  };
+  return randomDate;
 };
 
 // factory function for an array of n random booking objects
 const makeRandomBookings = (numOfBookings) => {
   const randomBookings = [];
-  for (let i = 0; i < numOfBookings; i++) {
-    randomBookings.push(createBooking());
+  for (let i = 1; i < numOfBookings + 1; i++) {
+    const booking = {
+      id: i,
+      venueId: Math.floor(Math.random() * 5) + 1,
+      bandId: Math.floor(Math.random() * 10) + 1,
+      bookingDate: createRandomDate(),
+    };
+    randomBookings.push(booking);
   }
   return randomBookings;
 };
