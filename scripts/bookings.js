@@ -23,7 +23,7 @@ const getVenueByVenueId = (bookingObj) => {
 };
 
 // make and export a bulleted list of all bookings
-export const bookingsHTML = () => {
+export const bookingList = () => {
   let html = "<ul>";
   let [band, venue] = ["", ""];
 
