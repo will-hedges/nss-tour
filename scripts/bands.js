@@ -6,7 +6,7 @@ const bands = getBands();
 export const bandsHTML = () => {
   let html = "<ul>";
   for (const band of bands) {
-    html += `<li>${band.name}</li>`;
+    html += `<li id="band--${band.id}">${band.name}</li>`;
   }
   html += "</ul>";
   return html;
