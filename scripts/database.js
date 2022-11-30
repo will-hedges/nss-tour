@@ -8,7 +8,7 @@ const createRandomDate = () => {
 };
 
 // factory function for an array of n random booking objects
-const makeRandomBookings = (numOfBookings) => {
+const createRandomBookings = (numOfBookings) => {
   const randomBookings = [];
   for (let i = 1; i < numOfBookings + 1; i++) {
     const booking = {
@@ -132,7 +132,7 @@ const database = {
       maxOccupancy: 100,
     },
   ],
-  bookings: makeRandomBookings(20),
+  bookings: createRandomBookings(20),
 };
 
 // getter functions for bands, venues, bookings
