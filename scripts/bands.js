@@ -15,7 +15,7 @@ export const bandList = () => {
 
 // write a function that filters booking objects based on the bands id
 // it should take a band object and return an array of booking objects
-export const filterBookingsByBand = (bandObj) => {
+const filterBookingsByBand = (bandObj) => {
   const bandBookings = [];
   for (const booking of bookings) {
     if (booking.bandId == bandObj.id) {
@@ -47,7 +47,6 @@ document.addEventListener("click", (clickEvent) => {
         scheduledBookings = filterBookingsByBand(band);
       }
     }
-    // now get all the bookings that that band has
     // now that we have an array of bookingObjs
     // we need to pull out the name of the venue for each one
     let bookingStringsArr = [];
@@ -55,8 +54,7 @@ document.addEventListener("click", (clickEvent) => {
       // pull out the venueObj for the booking
       let venue = getVenueByVenueId(booking);
       // now we can use the venue name
-      let bookingStr = `${booking.bookingDate} at ${venue.name}`;
-      bookingStringsArr.push(bookingStr);
+      bookingStringsArr.push(`${booking.bookingDate} at ${venue.name}`);
     }
     // now that we have an array of booking strings, join them with newlines
     window.alert(`${bookingStringsArr.join("\n")}`);

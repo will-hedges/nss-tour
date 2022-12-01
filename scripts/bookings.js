@@ -5,7 +5,7 @@ const bookings = getBookings();
 const venues = getVenues();
 
 // pull out a band based on a booking band id
-const getBandByBandId = (bookingObj) => {
+export const getBandByBandId = (bookingObj) => {
   for (const band of bands) {
     if (bookingObj.bandId == band.id) {
       return band;
