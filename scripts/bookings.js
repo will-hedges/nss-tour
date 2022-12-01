@@ -14,7 +14,7 @@ const getBandByBandId = (bookingObj) => {
 };
 
 // pull out a venue based on a booking venue id
-const getVenueByVenueId = (bookingObj) => {
+export const getVenueByVenueId = (bookingObj) => {
   for (const venue of venues) {
     if (bookingObj.venueId == venue.id) {
       return venue;
