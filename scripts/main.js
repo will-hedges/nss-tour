@@ -1,3 +1,28 @@
+import { bandList } from "./bands.js";
+import { bookingList } from "./bookings.js";
+import { venueList } from "./venues.js";
+
+const heroContainer = document.querySelector("#bookings");
+const columnContainer = document.querySelector("#columnContainer");
+
+const heroHTML = `
+<h1>Scheduled Bookings</h1>
+${bookingList()}
+`;
+
+const columnHTML = `
+<section id="band__list">
+  <h2>Available Bands</h2>
+  ${bandList()}
+</section>
+<div class="column__divider"></div>
+<section id="venue__list">
+  <h2>Available Venues</h2>
+  ${venueList()}
+</section>`;
+
+heroContainer.innerHTML = heroHTML;
+columnContainer.innerHTML = columnHTML;
 // STEP 1 - ANALYSIS
 
 /*

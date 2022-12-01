@@ -24,7 +24,7 @@ const getVenueByVenueId = (bookingObj) => {
 
 // make and export a bulleted list of all bookings
 export const bookingList = () => {
-  let html = "<ul>";
+  let bookingHTML = "<ul>";
   let [band, venue] = ["", ""];
 
   // go through all the bookings
@@ -34,7 +34,7 @@ export const bookingList = () => {
     // look at the booking, and match the venue id
     venue = getVenueByVenueId(booking);
     // create a string with the pertinent information
-    html += `<li id="booking--${booking.id}">${band.name} is playing at ${venue.name} on ${booking.date}</li>`;
+    bookingHTML += `<li id="booking--${booking.id}">${band.name} is playing at ${venue.name} on ${booking.bookingDate}</li>`;
   }
-  return html;
+  return bookingHTML;
 };

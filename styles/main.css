@@ -1,0 +1,13 @@
+#bookingContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#columnContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.column__divider {
+    width: 100px;
+}

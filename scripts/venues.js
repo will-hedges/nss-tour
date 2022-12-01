@@ -4,10 +4,10 @@ import { getVenues } from "./database.js";
 const venues = getVenues();
 
 export const venueList = () => {
-  let html = "<ul>";
+  let venueHTML = "<ul>";
   for (const venue of venues) {
-    html += `<li id="venue--${venue.id}">${venue.name}</li>`;
+    venueHTML += `<li id="venue--${venue.id}">${venue.name}</li>`;
   }
-  html += "</ul>";
-  return html;
+  venueHTML += "</ul>";
+  return venueHTML;
 };
